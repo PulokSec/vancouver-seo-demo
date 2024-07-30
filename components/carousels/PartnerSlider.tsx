@@ -21,7 +21,7 @@ const partners = [
 
 const PartnersSlider: React.FC = () => {
   return (
-    <div className="mt-10">
+    <section className="mt-20">
       <CarouselComponent>
         {partners.map((partner, index) => (
           <div key={index} className="flex justify-center items-center">
@@ -29,7 +29,7 @@ const PartnersSlider: React.FC = () => {
           </div>
         ))}
       </CarouselComponent>
-    </div>
+    </section>
   );
 };
 
