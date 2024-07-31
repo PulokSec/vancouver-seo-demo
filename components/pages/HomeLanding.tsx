@@ -7,6 +7,10 @@ import HomeAboutSection from '../about-sections/HomeAbout'
 import HomeServices from '../service-sections/HomeServices'
 import HomeChoiceSection from '../choice-section/HomeChoice'
 import TabRenovation from '../tab-sections/TabRenovation'
+import ReasonsSection from '../accordions/ReasonSection'
+import ReviewSlider from '../carousels/ReviewSlider'
+import TabSection from '../tab-sections/TabSection'
+import FaqAccordion from '../accordions/FaqAccordion'
 
 export default function HomeLanding() {
   return (
@@ -17,6 +21,10 @@ export default function HomeLanding() {
         <HomeAboutSection />
         <HomeServices />
         <HomeChoiceSection />
+        <ReasonsSection />
+        <ReviewSlider />
+        <TabSection />
+        <FaqAccordion />
       </main>
     </div>
   )

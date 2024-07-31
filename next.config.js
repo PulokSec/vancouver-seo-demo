@@ -51,8 +51,8 @@ const nextConfig = {
         pathname: '**',
       },
       {
-        protocol: 'http',
-        hostname: 'savemax-local.local',
+        protocol: 'https',
+        hostname: 'www.rankingbyseo.com',
         pathname: '**',
       },
       {
