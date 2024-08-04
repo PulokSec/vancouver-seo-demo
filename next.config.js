@@ -27,7 +27,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'savemaxbc.com',
+        hostname: 'cdn-eabih.nitrocdn.com',
         pathname: '**',
       },
       {
