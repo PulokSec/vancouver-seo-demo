@@ -12,6 +12,7 @@ import ReviewSlider from '../carousels/ReviewSlider'
 import TabSection from '../tab-sections/TabSection'
 import FaqAccordion from '../accordions/FaqAccordion'
 import HomeContact from '../contact-form/HomeContact'
+import FeaturedServices from '../service-sections/FeaturedServices'
 
 export default function HomeLanding() {
   return (
@@ -23,6 +24,7 @@ export default function HomeLanding() {
         <HomeServices />
         <HomeChoiceSection />
         <ReasonsSection />
+        <FeaturedServices />
         <ReviewSlider />
         <TabSection />
         <FaqAccordion />
