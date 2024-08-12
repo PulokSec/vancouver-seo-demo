@@ -28,27 +28,30 @@ const reasons: Reason[] = [
     description: 'We only work in SEO, and we outperform businesses offering diversified portfolios that offer poor strategy development and execution.',
   },
 ];
-
-const ReasonsSection: React.FC = () => {
+type MyProps = {
+  reasonSection : any;
+}
+const ReasonsSection = (props: MyProps) => {
+  const { reasonSection } = props;
+  console.log(reasonSection);
   return (
     <div className="py-16 px-4 md:px-10 lg:px-20 bg-gray-50">
       <div className="text-center mb-12">
-        <span className="text-red-500 font-semibold">Why SECI?</span>
-        <h2 className="text-3xl font-bold text-gray-800 mt-2">4 good reasons for choosing SEO Experts Company India</h2>
-        <p className="text-gray-600 mt-4">
-          When you work with a top rated seo services company like SEO Experts Company India, you can expect high-quality custom SEO services that are capable of increasing page traffic, top search engine rankings of your business. Our team of SEO strategists, copywriters, link outreach specialists strives to offer seo services that yield long-term results for your business.
-        </p>
+        {/* <span className="text-red-500 font-semibold">Why SECI?</span> */}
+        <h2 className="text-3xl font-bold text-gray-800 mt-2">{reasonSection?.title}</h2>
+        <div className="text-gray-600 mt-4" dangerouslySetInnerHTML={{__html: reasonSection?.description}}>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {reasons.map((reason) => (
-          <div key={reason.number} className="bg-white p-6 rounded-lg shadow-lg">
+        {reasonSection?.featuredData.map((reason, idx) => (
+          <div key={idx} className="bg-white p-6 rounded-lg shadow-lg">
             <div className="flex items-start">
               <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-full">
-                <span className="text-2xl font-bold">{reason.number}</span>
+                <span className="text-2xl font-bold">{idx+1}</span>
               </div>
               <div className="ml-4">
                 <h3 className="text-xl font-semibold text-gray-800">{reason.title}</h3>
-                <p className="mt-2 text-gray-600">{reason.description}</p>
+                <div className="mt-2 text-gray-600"dangerouslySetInnerHTML={{__html: reason.description}}></div>
               </div>
             </div>
           </div>

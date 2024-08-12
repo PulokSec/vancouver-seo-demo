@@ -32,6 +32,11 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'vancouverseo.webmyway.ca',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
         hostname: 'ddfcdn.realtor.ca',
         pathname: '**',
       },

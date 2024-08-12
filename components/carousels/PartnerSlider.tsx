@@ -1,7 +1,6 @@
-import React from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+'use client';
 import Image from 'next/image';
+import 'react-multi-carousel/lib/styles.css';
 import CarouselComponent from './CarouselComponent';
 
 const partners = [
@@ -18,14 +17,18 @@ const partners = [
   { src: 'https://vancouverseo.com/wp-content/uploads/2021/11/cropped-Vancouver-SEO.png', alt: 'GoodFirms' },
 ];
 
+type MyProps = {
+  partnerData : any;
+}
 
-const PartnersSlider: React.FC = () => {
+const PartnersSlider = (props: MyProps) => {
+  const { partnerData } = props;
   return (
     <section className="mt-20">
       <CarouselComponent>
-        {partners.map((partner, index) => (
+        {partnerData.map((partner, index) => (
           <div key={index} className="flex justify-center items-center">
-            <Image src={partner.src} alt={partner.alt} width={160} height={100} />
+            <Image src={partner.image.node.sourceUrl} alt={partner.image.node.altText} width={160} height={100} />
           </div>
         ))}
       </CarouselComponent>

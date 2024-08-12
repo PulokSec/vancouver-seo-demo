@@ -108,3 +108,34 @@ form button {
   @apply absolute bottom-0 right-0 
     rounded-tl-md;
 }
+
+
+/* transition animations */
+/* Initial state before the animation */
+.opacity-0 {
+  opacity: 0;
+  transform: translateX(0);
+}
+
+/* Animations */
+.animate-slide-in {
+  opacity: 1 !important;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.slide-in-from-left {
+  transform: translateX(-100%);
+}
+
+.animate-slide-in.slide-in-from-left {
+  transform: translateX(0);
+}
+
+.slide-in-from-right {
+  transform: translateX(100%);
+}
+
+.animate-slide-in.slide-in-from-right {
+  transform: translateX(0);
+}
+
