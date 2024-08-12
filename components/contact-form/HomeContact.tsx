@@ -4,8 +4,8 @@ import Image from 'next/image';
 const HomeContact = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-[#3A5DE1] via-[#414EDD] to-[#356AE4] mt-20">
-      <div className="grid grid-cols-2 bg-[#04BF7E] rounded-lg shadow-lg w-full max-w-5xl p-4 gap-4">
-        <div className="right-[50px] relative z-1 w-full">
+      <div className="grid lg:grid-cols-2 grid-cols-1 lg:bg-[#04BF7E] rounded-lg shadow-lg w-full max-w-5xl p-4 gap-4">
+        <div className="right-[50px] relative z-1 w-full hodden lg:block">
           <Image
             src="https://cdn-eabih.nitrocdn.com/ZQfizZxQIikmSihwfYEnJxkANfkzMZTt/assets/images/optimized/rev-adf0c7e/wp-content/uploads/2024/01/seo-vancouver-bc.webp"
             alt="Left Image 1"
@@ -24,18 +24,18 @@ const HomeContact = () => {
           />
         </div>
         <div className="flex-1 px-5 bg-white rounded-lg shadow-lg justify-center items-center py-10 w-full">
-          <h2 className="text-3xl font-bold mb-6">Ready for more visitors?</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Ready for more visitors?</h2>
           <form className="space-y-4">
             <div className="flex space-x-2">
               <input
                 type="text"
                 placeholder="Your name *"
-                className="flex-1 p-2 border rounded"
+                className="flex-1 p-2 border rounded w-full"
               />
               <input
                 type="text"
                 placeholder="Your phone number *"
-                className="flex-1 p-2 border rounded"
+                className="flex-1 p-2 border rounded w-full"
               />
             </div>
             <input
@@ -80,6 +80,7 @@ const HomeContact = () => {
             <textarea
               placeholder="What brings you to us today?"
               className="w-full p-2 border rounded"
+              rows={4}
             />
             <div className="flex items-center justify-start space-x-2">
               <input type="checkbox" />

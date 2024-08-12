@@ -134,7 +134,7 @@ const HomeServices= (props: MyProps) => {
         {serviceSection?.featuredData.map((solution, index) => (
           <div key={index} className="bg-white rounded-lg shadow-lg flex flex-col items-center justify-between">
             <div className="p-4">
-            <h2 className="text-xl font-semibold text-gray-800">{solution.title}</h2>
+            <h3 className="text-xl font-semibold text-gray-800">{solution.title}</h3>
             <div className="mt-4 text-gray-600" dangerouslySetInnerHTML={{__html: solution.description}}></div>
             {/* <ul className="mt-4 space-y-2">
               {solution.points.map((point, idx) => (

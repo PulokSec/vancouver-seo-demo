@@ -60,7 +60,7 @@ export default function FeaturedServices(props: MyProps) {
             className={`flex flex-col ${ index % 2 == 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center mb-8`}
           >
             <div className="md:w-1/2 p-4 rounded-lg">
-              <h2 className="text-3xl font-bold text-gray-800 text-center md:text-left">{item?.title}</h2>
+              <h3 className="text-3xl font-bold text-gray-800 text-center md:text-left">{item?.title}</h3>
               <div className="flex flex-col items-center justify-center mb-4 space-y-5 py-5 text-lg" dangerouslySetInnerHTML={{ __html: item?.description }}></div>
             </div>
             <div className="md:w-1/2 p-4">
