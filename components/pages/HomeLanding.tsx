@@ -13,6 +13,7 @@ import TabSection from '../tab-sections/TabSection'
 import FaqAccordion from '../accordions/FaqAccordion'
 import HomeContact from '../contact-form/HomeContact'
 import FeaturedServices from '../service-sections/FeaturedServices'
+import FeaturedRounded from '../service-sections/FeaturedRounded'
 
 type MyProps = {
   data: any;
@@ -29,7 +30,7 @@ export default function HomeLanding(props: MyProps) {
         <HomeServices serviceSection={data?.serviceSection}/>
         <HomeChoiceSection choiceSection={data?.choiceSection}/>
         <FeaturedServices featuredSection={data?.importanceSection}/>
-        <FeaturedServices featuredSection={data?.powerSection}/>
+        <FeaturedRounded featuredSection={data?.powerSection}/>
         <FeaturedServices featuredSection={data?.investingSection}/>
         <FeaturedServices featuredSection={data?.necessarySection}/>
         <ReasonsSection reasonSection={data?.pointSection}/>

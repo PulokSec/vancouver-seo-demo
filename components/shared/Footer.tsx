@@ -1,8 +1,12 @@
 import React from 'react';
 import { footerData } from './data';
 import Image from 'next/image';
-
-const Footer = () => {
+type MyProps = {
+  footerItems: any;
+};
+const Footer = (props: MyProps) => {
+  const { footerItems } = props;
+  console.log(footerItems);
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl px-4 mx-auto sm:px-6 lg:px-8 py-12">

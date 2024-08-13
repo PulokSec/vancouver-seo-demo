@@ -33,8 +33,10 @@ button {
 button:hover {
   @apply bg-opacity-90;
 }
+@layer components {
 .btn-primary {
   @apply bg-primary text-white;
+}
 }
 .btn-secondary {
   @apply bg-gray-200 text-gray-900;

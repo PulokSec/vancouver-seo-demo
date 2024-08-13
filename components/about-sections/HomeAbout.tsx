@@ -20,13 +20,15 @@ const HomeAboutSection = (props: MyProps) => {
           </div>
         </div>
       </div>
-        <div className="relative w-full h-64 md:h-96 bg-white rounded-lg shadow-lg overflow-hidden max-w-6xl mb-[-10%]">
+        <div className="relative w-full h-64 md:h-96 bg-white shadow-lg overflow-hidden max-w-6xl mb-[-10%]" style={{
+              borderRadius: '300px 300px 100px 100px',
+            }}>
           <Image
             src={aboutSection?.image?.node?.sourceUrl} // Update with your image path
             alt={aboutSection?.image?.node?.altText}
             fill
             objectFit="contain"
-            className="rounded-b-lg"
+            className=""
           />
         </div>
     </div>
