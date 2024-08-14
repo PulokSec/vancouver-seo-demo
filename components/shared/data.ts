@@ -83,7 +83,7 @@ export const headerData = {
     },
     // Add more menu items as needed
   ],
-  phone: '888-256-9448',
+  phone: '(778) 655-8505',
 };
 
 export const footerData = {
@@ -95,7 +95,7 @@ export const footerData = {
   ],
   contact: {
     title: 'Ready to speak with a marketing expert? Give us a ring',
-    phone: '888-256-9448',
+    phone: '(778) 655-8505',
   },
   sections: [
     {

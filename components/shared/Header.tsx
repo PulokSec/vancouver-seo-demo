@@ -17,16 +17,17 @@ const Header = (props: MyProps) => {
     <header className="bg-gradient-to-r from-[#3A5DE1] via-[#414EDD] to-[#356AE4] shadow fixed w-full top-0 z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Image src={headerData.logo} alt="Logo" width={120} height={40} />
-        <nav className="hidden md:flex space-x-16">
+        <nav className="hidden md:flex space-x-16" >
           {headerItems.map((menuItem, index) => (
             <div
               key={index}
               className={`${menuItem?.parentId === null ? 'block' : 'hidden'} relative`}
+              onMouseEnter={() => setHoveredMenu(index)} 
             >
               {
                 menuItem?.parentId === null && (
                   <a href={menuItem?.url}>
-                <p className="text-white hover:text-gray-900 focus:outline-none flex items-center justify-center xl:text-xl gap-1 " onMouseEnter={() => setHoveredMenu(index)}>
+                <p className="text-white hover:text-gray-900 focus:outline-none flex items-center justify-center xl:text-xl gap-1 " >
                 {menuItem.label}
                 {menuItem?.childItems?.nodes?.length > 0 && (
                   hoveredMenu === index ? <FiChevronUp size={20} /> : <FiChevronDown size={20} />
@@ -36,7 +37,7 @@ const Header = (props: MyProps) => {
                 )
               }
               {hoveredMenu === index && menuItem?.childItems?.nodes?.length > 0 && (
-                <div className="absolute left-0 lg:w-screen md:w-[600px] max-w-3xl bg-white shadow-lg p-6 mt-[23px]" onMouseLeave={() => setHoveredMenu(null)}>
+                <div className="absolute left-0 lg:w-screen md:w-[600px] max-w-3xl bg-white shadow-lg p-6 mt-[22px]" onMouseLeave={() => setHoveredMenu(null)}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {menuItem?.childItems?.nodes?.map((column, colIndex) => (
                       <div key={colIndex}>
