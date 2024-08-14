@@ -19,7 +19,7 @@ const HomeBanner = (props: MyProps) => {
         </div>
         </div>
         <div className="mt-10 w-full p-2 bg-gradient-to-r from-[#3A5DE1] via-[#414EDD] to-[#356AE4] text-white rounded-lg shadow-lg lg:w-2/4 py-5">
-          <p className="text-2xl font-bold text-white">Call: +1-717-207-7706</p>
+          <p className="text-2xl font-bold text-white">Call: (778) 655-8505</p>
           <p className="mt-2">Or fill in the form below and we'll call you.</p>
           <form className="mt-4 space-y-4">
             <input type="text" placeholder="Full Name" className="w-full p-2 rounded text-black lg:w-[300px]" required />

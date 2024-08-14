@@ -1,22 +1,27 @@
 import React from 'react';
 import Image from 'next/image';
 
-const HomeContact = () => {
+
+type MyProps = {
+  contactSection : any;
+}
+const HomeContact = (props: MyProps) => {
+  const { contactSection } = props;
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-[#3A5DE1] via-[#414EDD] to-[#356AE4] mt-20">
       <div className="grid lg:grid-cols-2 grid-cols-1 lg:bg-[#04BF7E] rounded-lg shadow-lg w-full max-w-5xl p-4 gap-4">
         <div className="right-[50px] relative z-1 w-full hodden lg:block">
           <Image
-            src="https://cdn-eabih.nitrocdn.com/ZQfizZxQIikmSihwfYEnJxkANfkzMZTt/assets/images/optimized/rev-adf0c7e/wp-content/uploads/2024/01/seo-vancouver-bc.webp"
-            alt="Left Image 1"
+            src={contactSection?.leftImage?.node?.sourceUrl}
+            alt={contactSection?.leftImage?.node?.altText}
             width={200}
             height={600}
             objectFit="cover"
             className="rounded shadow-md bg-white w-full lg:w-2/4 h-[80%] absolute top-[45%] left-0 translate-y-[-50%]"
           />
           <Image
-            src="https://cdn-eabih.nitrocdn.com/ZQfizZxQIikmSihwfYEnJxkANfkzMZTt/assets/images/optimized/rev-adf0c7e/wp-content/uploads/2024/01/seo-vancouver.webp"
-            alt="Left Image 2"
+            src={contactSection?.rightImage?.node?.sourceUrl}
+            alt={contactSection?.rightImage?.node?.altText}
             width={300}
             height={600}
             objectFit="cover"
@@ -24,7 +29,7 @@ const HomeContact = () => {
           />
         </div>
         <div className="flex-1 px-5 bg-white rounded-lg shadow-lg justify-center items-center py-10 w-full">
-          <h2 className="text-3xl font-bold mb-6 text-center">Ready for more visitors?</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">{contactSection?.title}</h2>
           <form className="space-y-4">
             <div className="flex space-x-2">
               <input

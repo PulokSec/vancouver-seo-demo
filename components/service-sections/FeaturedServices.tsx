@@ -8,6 +8,7 @@ type MyProps = {
 
 export default function FeaturedServices(props: MyProps) {
   const { featuredSection } = props;
+  console.log(featuredSection);
   const sectionRefs = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
@@ -45,10 +46,13 @@ export default function FeaturedServices(props: MyProps) {
 
   return (
     <div className="max-w-7xl mx-auto p-4 mt-20">
-      <div className="text-center mb-10">
+      <div className="text-center mb-5">
         <h2 className="text-4xl font-bold text-gray-800">{featuredSection?.title}</h2>
         <div className="mt-2 text-xl text-gray-600" dangerouslySetInnerHTML={{ __html: featuredSection?.description }}></div>
       </div>
+        <div className="flex items-center justify-center gap-4 py-5">
+        <a href={featuredSection?.linkUrl} className=""><button className=" bg-red-600 py-2 rounded text-white font-bold lg:w-[250px] flex justify-center uppercase"><span className="text-center px-1">{featuredSection?.linkText}</span></button></a>
+        </div>
       <div>
         {featuredSection?.featuredData.map((item, index) => (
           <div

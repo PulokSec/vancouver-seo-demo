@@ -121,7 +121,7 @@ const services = [
 type MyProps = {
   serviceSection : any;
 }
-const HomeServices= (props: MyProps) => {
+const HomeServices = (props: MyProps) => {
   const { serviceSection } = props;
   return (
     <section className="flex flex-col items-center py-10 bg-gray-100 px-4 md:px-10 lg:px-20 mt-20 lg:mt-40">

@@ -174,6 +174,22 @@ export default async function Home() {
             title
           }
         }
+          homeContactSection {
+          leftImage {
+            node {
+              altText
+              sourceUrl
+            }
+          }
+          rightImage {
+            node {
+              altText
+              sourceUrl
+            }
+          }
+          title
+          description
+        }
       }
       seo {
         title

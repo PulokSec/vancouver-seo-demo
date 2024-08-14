@@ -37,7 +37,7 @@ export default function HomeLanding(props: MyProps) {
         {/* <ReviewSlider />
         <TabSection />
         <FaqAccordion /> */}
-        <HomeContact />
+        <HomeContact contactSection={data?.homeContactSection}/>
       </main>
     </div>
   )
