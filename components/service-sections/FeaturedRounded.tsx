@@ -1,47 +1,14 @@
 'use client';
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
-
+import { Fade } from 'react-awesome-reveal';
 type MyProps = {
   featuredSection: any;
 };
 
 export default function FeaturedRounded(props: MyProps) {
   const { featuredSection } = props;
-  const sectionRefs = useRef<Array<HTMLDivElement | null>>([]);
 
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1, // Adjust this value as needed
-    };
-
-    const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          if (sectionRefs.current[index]) {
-            sectionRefs.current[index]?.classList.add('animate-slide-in');
-            observer.unobserve(entry.target); // Stop observing once animation is triggered
-          }
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    sectionRefs.current.forEach((section) => {
-      if (section) {
-        observer.observe(section);
-      }
-    });
-
-    return () => {
-      sectionRefs.current.forEach((section) => {
-        if (section) {
-          observer.unobserve(section);
-        }
-      });
-    };
-  }, []);
 
   return (
     <div className="max-w-7xl mx-auto p-4 mt-20">
@@ -56,17 +23,16 @@ export default function FeaturedRounded(props: MyProps) {
         {featuredSection?.featuredData.map((item, index) => (
           <div
             key={index}
-            ref={(el:any) => (sectionRefs.current[index] = el)}
-            // className={`flex flex-col transition-opacity duration-700 ease-out opacity-0 transform ${
-            //   index % 2 === 0 ? 'md:flex-row slide-in-from-left' : 'md:flex-row-reverse slide-in-from-right'
-            // } items-center mb-8`}
             className={`flex flex-col ${ index % 2 == 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center mb-8`}
           >
             <div className="md:w-1/2 p-4 rounded-lg">
+            <Fade cascade damping={0.2} triggerOnce direction='up'>
               <h3 className="text-3xl font-bold text-gray-800 text-center md:text-left">{item?.title}</h3>
               <div className="flex flex-col items-center justify-center mb-4 space-y-5 py-5 text-lg" dangerouslySetInnerHTML={{ __html: item?.description }}></div>
+              </Fade>
             </div>
             <div className="md:w-1/2 p-4">
+            <Fade direction={index % 2 === 0 ? 'right': 'left'} delay={0.5} fraction={0.2} triggerOnce>
               <Image
                 src={item?.image?.node?.sourceUrl}
                 alt={item?.image?.node?.altText}
@@ -77,7 +43,9 @@ export default function FeaturedRounded(props: MyProps) {
                 style={{
                   borderRadius: index % 2 === 0 ? '100px 100px 300px 100px' : '300px 100px 100px 100px',
                 }}
+                quality={100}
               />
+            </Fade>
             </div>
           </div>
         ))}

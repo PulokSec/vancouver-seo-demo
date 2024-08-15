@@ -29,6 +29,7 @@ const HomeAboutSection = (props: MyProps) => {
             fill
             objectFit="contain"
             className=""
+            quality={100}
           />
         </div>
     </div>

@@ -29,6 +29,7 @@
     "next": "^14.0.1",
     "nodemailer": "^6.9.7",
     "react": "^18.3.0-canary-ce2bc58a9-20231102",
+    "react-awesome-reveal": "^4.2.14",
     "react-dom": "^18.3.0-canary-ce2bc58a9-20231102",
     "react-icons": "^4.10.1",
     "react-multi-carousel": "^2.8.4",

@@ -2,6 +2,72 @@ import { getClient } from "@faustwp/experimental-app-router";
 import { gql } from "@apollo/client";
 import Link from "next/link";
 import HomeLanding from "@/components/pages/HomeLanding";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const client = await getClient();
+  const { data } = await client.query({
+    query: gql`
+      {
+        pages(where: { id: 2 }) {
+          nodes {
+            seo {
+              title
+              description
+              canonicalUrl
+              focusKeywords
+              openGraph {
+                image {
+                  url
+                }
+              }
+              jsonLd {
+                raw
+              }
+            }
+          }
+        }
+      }
+    `,
+    context: {
+      fetchOptions: {
+        next: { revalidate: 5 },
+      },
+    },
+  });
+  
+  const path = new URL(data?.pages?.nodes[0]?.seo?.canonicalUrl).pathname;
+  const canonical_url = `${process.env.NEXT_PUBLIC_BASEURL}${path}`;
+  return {
+    title: data?.pages?.nodes[0]?.seo?.title,
+    description: data?.pages?.nodes[0]?.seo?.description,
+    alternates: {
+      canonical: canonical_url,
+    },
+    robots: { index: true, follow: true },
+    openGraph: {
+      url: canonical_url,
+      title: data?.pages?.nodes[0]?.seo?.title,
+      description: data?.pages?.nodes[0]?.seo?.description,
+      siteName: 'https://vancouverseo.com/',
+      images: data?.pages?.nodes[0]?.seo?.openGraph?.image?.url,
+      type: 'website',
+      locale: 'en_US',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: data?.pages?.nodes[0]?.seo?.title,
+      description: data?.pages?.nodes[0]?.seo?.description,
+      creator: '@PulokSec',
+    },
+    authors: [
+      {
+        name: 'Cansoft Tech',
+        url: 'https://cansoft.com/',
+      },
+    ],
+  };
+}
 
 export default async function Home() {
   let client = await getClient();
@@ -190,19 +256,6 @@ export default async function Home() {
           title
           description
         }
-      }
-      seo {
-        title
-        jsonLd {
-          raw
-        }
-        openGraph {
-          image {
-            url
-          }
-        }
-        description
-        canonicalUrl
       }
     }
   }

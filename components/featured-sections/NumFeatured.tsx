@@ -76,6 +76,7 @@ const NumFeatured: React.FC = () => {
             layout="responsive"
             width={700}
             height={475}
+            quality={100}
           />
         </div>
       </div>

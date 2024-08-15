@@ -1,33 +1,13 @@
+'use client';
 import React from 'react';
-
+import { Fade } from 'react-awesome-reveal';
 interface Reason {
   number: number;
   title: string;
   description: string;
 }
 
-const reasons: Reason[] = [
-  {
-    number: 1,
-    title: 'SEO Company with Proven Track Record',
-    description: 'SEO practices are ever-evolving, and we keep pace with it. Our professionals have years of experience to grow businesses by putting in the best SEO efforts.',
-  },
-  {
-    number: 2,
-    title: 'Only White Hat SEO Practices',
-    description: 'Our SEO experts use data-driven and creative white hat SEO practices. With experience in various niches, you can trust our top-notch services for success.',
-  },
-  {
-    number: 3,
-    title: 'Transparent Reporting',
-    description: 'We always share regular SEO progress reports on a weekly and monthly basis. We believe in transparency and keep our clients informed during the complete execution of SEO campaign.',
-  },
-  {
-    number: 4,
-    title: 'Dedicated SEO Teams',
-    description: 'We only work in SEO, and we outperform businesses offering diversified portfolios that offer poor strategy development and execution.',
-  },
-];
+
 type MyProps = {
   reasonSection : any;
 }
@@ -53,8 +33,10 @@ const ReasonsSection = (props: MyProps) => {
                 <span className="text-2xl font-bold">{idx+1}</span>
               </div>
               <div className="ml-4">
+              <Fade cascade damping={0.2} triggerOnce direction='up'>
                 <h3 className="text-xl font-semibold text-gray-800">{reason.title}</h3>
                 <div className="mt-2 text-gray-600"dangerouslySetInnerHTML={{__html: reason.description}}></div>
+                </Fade>
               </div>
             </div>
           </div>

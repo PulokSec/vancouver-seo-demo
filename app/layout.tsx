@@ -7,6 +7,11 @@ const rubik = Rubik({ subsets: ["latin"] });
 import { getClient } from "@faustwp/experimental-app-router";
 import { gql } from "@apollo/client";
 
+export const metadata = {
+  icons: {
+    icon: '../public/favicon.ico',
+  },
+};
 export default async function RootLayout({ children }) {
   let client = await getClient();
   const { data } = await client.query({
@@ -40,7 +45,6 @@ export default async function RootLayout({ children }) {
   }
   }`,
   });
-  console.log(data);
   return (
     <html lang="en">
       <body className={rubik.className}>

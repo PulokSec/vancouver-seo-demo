@@ -26,6 +26,7 @@ const HomeChoiceSection = (props: MyProps)=> {
           height={400}
           objectFit='cover'
           className="rounded-2xl w-full lg:w-[700px] h-[400px] object-cover shadow-lg"
+          quality={100}
         />
       </div>
       </div>

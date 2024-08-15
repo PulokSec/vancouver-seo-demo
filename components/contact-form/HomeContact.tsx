@@ -8,9 +8,9 @@ type MyProps = {
 const HomeContact = (props: MyProps) => {
   const { contactSection } = props;
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-[#3A5DE1] via-[#414EDD] to-[#356AE4] mt-20">
+    <div className="flex justify-center items-center min-h-screen mt-20">
       <div className="grid lg:grid-cols-2 grid-cols-1 lg:bg-[#04BF7E] rounded-lg shadow-lg w-full max-w-5xl p-4 gap-4">
-        <div className="right-[50px] relative z-1 w-full hodden lg:block">
+        <div className="right-[100px] relative z-1 w-full hodden lg:block">
           <Image
             src={contactSection?.leftImage?.node?.sourceUrl}
             alt={contactSection?.leftImage?.node?.altText}
@@ -18,6 +18,7 @@ const HomeContact = (props: MyProps) => {
             height={600}
             objectFit="cover"
             className="rounded shadow-md bg-white w-full lg:w-2/4 h-[80%] absolute top-[45%] left-0 translate-y-[-50%]"
+            quality={100}
           />
           <Image
             src={contactSection?.rightImage?.node?.sourceUrl}
@@ -26,6 +27,7 @@ const HomeContact = (props: MyProps) => {
             height={600}
             objectFit="cover"
             className="rounded shadow-md bg-white absolute top-[50%] left-[270px] translate-y-[-45%] w-2/4 h-[80%]"
+            quality={100}
           />
         </div>
         <div className="flex-1 px-5 bg-white rounded-lg shadow-lg justify-center items-center py-10 w-full">

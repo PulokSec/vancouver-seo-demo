@@ -28,7 +28,7 @@ const PartnersSlider = (props: MyProps) => {
       <CarouselComponent>
         {partnerData.map((partner, index) => (
           <div key={index} className="flex justify-center items-center">
-            <Image src={partner.image.node.sourceUrl} alt={partner.image.node.altText} width={160} height={100} />
+            <Image src={partner.image.node.sourceUrl} alt={partner.image.node.altText} width={160} height={100} quality={100}/>
           </div>
         ))}
       </CarouselComponent>

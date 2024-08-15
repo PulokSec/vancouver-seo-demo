@@ -16,7 +16,7 @@ const Header = (props: MyProps) => {
   return (
     <header className="bg-gradient-to-r from-[#3A5DE1] via-[#414EDD] to-[#356AE4] shadow fixed w-full top-0 z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <Image src={headerData.logo} alt="Logo" width={120} height={40} />
+        <Image src={headerData.logo} alt="Logo" width={120} height={40} quality={100}/>
         <nav className="hidden md:flex space-x-16" >
           {headerItems.map((menuItem, index) => (
             <div
@@ -27,7 +27,7 @@ const Header = (props: MyProps) => {
               {
                 menuItem?.parentId === null && (
                   <a href={menuItem?.url}>
-                <p className="text-white hover:text-gray-900 focus:outline-none flex items-center justify-center xl:text-xl gap-1 " >
+                <p className="text-white hover:text-gray-900 focus:outline-none flex items-center justify-center xl:text-xl gap-1 hover:font-semibold" >
                 {menuItem.label}
                 {menuItem?.childItems?.nodes?.length > 0 && (
                   hoveredMenu === index ? <FiChevronUp size={20} /> : <FiChevronDown size={20} />
@@ -41,13 +41,13 @@ const Header = (props: MyProps) => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {menuItem?.childItems?.nodes?.map((column, colIndex) => (
                       <div key={colIndex}>
-                        <a href={column?.uri} className=""><p className="font-semibold mb-2 text-lg ">{column.label}</p></a>
+                        <a href={column?.uri} className=""><p className="font-semibold mb-2 text-lg hover:font-bold">{column.label}</p></a>
                         {
                           column?.childItems?.nodes?.length !== 0 && (
                             <ul className="space-y-1">
                           {column?.childItems?.nodes?.map((item, itemIndex) => (
                             <li key={itemIndex}>
-                              <a href={item?.uri} className="text-gray-700 hover:text-gray-900 text-md">
+                              <a href={item?.uri} className="text-gray-700 text-md hover:text-[#414EDD] hover:font-semibold">
                                 {item?.label}
                               </a>
                             </li>
