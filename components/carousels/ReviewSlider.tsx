@@ -80,7 +80,7 @@ const ReviewSlider: React.FC = () => {
         {reviews.map((_, index) => (
           <button
             key={index}
-            className={`mx-1 w-3 h-3 rounded-full ${index === currentIndex ? 'bg-red-600' : 'bg-gray-400'}`}
+            className={`mx-1 w-3 h-3 rounded-full ${index === currentIndex ? 'bg-[#00C2CC]' : 'bg-gray-400'}`}
             onClick={() => setCurrentIndex(index)}
           ></button>
         ))}

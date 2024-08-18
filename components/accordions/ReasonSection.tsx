@@ -23,7 +23,7 @@ const ReasonsSection = (props: MyProps) => {
         </div>
       </div>
       <div className="flex items-center justify-center gap-4 py-5">
-        <a href={reasonSection?.linkUrl} className=""><button className=" bg-red-600 py-2 rounded text-white font-bold lg:w-[250px] flex justify-center uppercase"><span className="text-center px-1">{reasonSection?.linkText}</span></button></a>
+        <a href={reasonSection?.linkUrl} className=""><button className=" bg-[#00C2CC] py-2 rounded text-white font-bold lg:w-[250px] flex justify-center uppercase"><span className="text-center px-1">{reasonSection?.linkText}</span></button></a>
         </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {reasonSection?.featuredData.map((reason, idx) => (

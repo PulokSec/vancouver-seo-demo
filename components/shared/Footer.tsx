@@ -88,7 +88,7 @@ const Footer = (props: MyProps) => {
               <Image key={index} src='https://vancouverseo.com/wp-content/uploads/2021/11/cropped-Vancouver-SEO.png' alt={partner} width={40} height={40} quality={100}/>
             ))}
           </div>
-          <div className="flex justify-between items-center mt-8">
+          <div className="flex lg:flex-row flex-col lg:justify-between justify-center gap-4 items-center mt-8">
             <p className="text-gray-400">{footerData.copyright}</p>
             <div className="flex space-x-4">
               {footerData.links.map((link, index) => (

@@ -17,7 +17,7 @@ export default function FeaturedRounded(props: MyProps) {
         <div className="mt-2 text-xl text-gray-600" dangerouslySetInnerHTML={{ __html: featuredSection?.description }}></div>
       </div>
       <div className="flex items-center justify-center gap-4 py-5">
-        <a href={featuredSection?.linkUrl} className=""><button className=" bg-red-600 py-2 rounded text-white font-bold lg:w-[250px] flex justify-center uppercase"><span className="text-center px-1">{featuredSection?.linkText}</span></button></a>
+        <a href={featuredSection?.linkUrl} className=""><button className=" bg-[#00C2CC] py-2 rounded text-white font-bold lg:w-[250px] flex justify-center uppercase"><span className="text-center px-1">{featuredSection?.linkText}</span></button></a>
         </div>
       <div>
         {featuredSection?.featuredData.map((item, index) => (
@@ -28,7 +28,7 @@ export default function FeaturedRounded(props: MyProps) {
             <div className="md:w-1/2 p-4 rounded-lg">
             <Fade cascade damping={0.2} triggerOnce direction='up'>
               <h3 className="text-3xl font-bold text-gray-800 text-center md:text-left">{item?.title}</h3>
-              <div className="flex flex-col items-center justify-center mb-4 space-y-5 py-5 text-lg" dangerouslySetInnerHTML={{ __html: item?.description }}></div>
+              <div className="flex flex-col items-center justify-center mb-4 space-y-5 py-5 text-lg text-center md:text-left" dangerouslySetInnerHTML={{ __html: item?.description }}></div>
               </Fade>
             </div>
             <div className="md:w-1/2 p-4">

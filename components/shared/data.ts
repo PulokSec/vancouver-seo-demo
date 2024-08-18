@@ -159,9 +159,9 @@ export const footerData = {
       ],
     },
   ],
-  footerNote: 'PROUDLY BROUGHT TO YOU BY Vancouver Seo Services',
+  footerNote: 'PROUDLY BROUGHT TO YOU BY VANCOUVER SEO .COM',
   partners: ['SEO.com', 'TeamAI', 'Nutshell'],
-  copyright: 'Vancouver Seo Services® 1995-2024',
+  copyright: 'Vancouver Seo ® 2019-2024',
   links: [
     { name: 'Sitemap', href: '#' },
     { name: 'Privacy & Terms of Use', href: '#' },

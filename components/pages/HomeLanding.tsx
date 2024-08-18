@@ -14,6 +14,8 @@ import FaqAccordion from '../accordions/FaqAccordion'
 import HomeContact from '../contact-form/HomeContact'
 import FeaturedServices from '../service-sections/FeaturedServices'
 import FeaturedRounded from '../service-sections/FeaturedRounded'
+import SeoBackground from '../hero-sections/SeoBackground'
+import FeaturedTabService from '../service-sections/FeaturedTabService'
 
 type MyProps = {
   data: any;
@@ -27,16 +29,16 @@ export default function HomeLanding(props: MyProps) {
         <HomeBanner bannerSection={data?.homeBannerSection}/>
         <PartnersSlider partnerData={data?.partnerSection}/>
         <HomeAboutSection aboutSection={data?.aboutSection}/>
-        <HomeServices serviceSection={data?.serviceSection}/>
+        <FeaturedTabService serviceSection={data?.serviceSection}/>
         <HomeChoiceSection choiceSection={data?.choiceSection}/>
         <FeaturedServices featuredSection={data?.importanceSection}/>
         <FeaturedRounded featuredSection={data?.powerSection}/>
         <FeaturedServices featuredSection={data?.investingSection}/>
         <FeaturedServices featuredSection={data?.necessarySection}/>
         <ReasonsSection reasonSection={data?.pointSection}/>
-        {/* <ReviewSlider />
-        <TabSection />
-        <FaqAccordion /> */}
+        {/* <ReviewSlider /> */}
+        {/* <TabSection /> */}
+        {/* <FaqAccordion /> */}
         <HomeContact contactSection={data?.homeContactSection}/>
       </main>
     </div>

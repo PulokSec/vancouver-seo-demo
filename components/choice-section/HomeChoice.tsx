@@ -8,7 +8,19 @@ const HomeChoiceSection = (props: MyProps)=> {
   const { choiceSection } = props;
   console.log(choiceSection);
   return (
-    <section className="py-10 bg-gradient-to-r from-gray-50 to-blue-50 px-4 md:px-10 lg:px-20 lg:mt-20 mt-10">
+    <div className="relative w-screen bg-gradient-to-r from-gray-50 to-blue-50 bg-repeat">
+      {/* Foreground Image */}
+      <div className="absolute inset-0 opacity-95">
+        <Image
+          src={choiceSection?.bgImage?.node?.sourceUrl}
+          alt={choiceSection?.bgImage?.node?.altText}
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="transition-all duration-300 ease-in-out"
+        />
+      </div>
+    <section className="py-10 px-4 md:px-10 lg:px-20 lg:mt-20 mt-10 relative">
       <div className="flex flex-col md:flex-row items-center justify-center">
       <div className="flex-1 md:mr-10">
         <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -31,7 +43,8 @@ const HomeChoiceSection = (props: MyProps)=> {
       </div>
       </div>
       <TabRenovation featuredData={choiceSection?.featuredData} />
-    </section>
+      </section>
+    </div>
   );
 };
 

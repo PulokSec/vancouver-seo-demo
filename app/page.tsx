@@ -91,6 +91,8 @@ export default async function Home() {
               sourceUrl
             }
           }
+          linkText
+          linkUrl
           description
           title
           image {
@@ -104,6 +106,12 @@ export default async function Home() {
           featuredData {
             description
             title
+          }
+          bgImage {
+            node {
+              altText
+              sourceUrl
+            }
           }
           linkText
           linkUrl
@@ -242,6 +250,12 @@ export default async function Home() {
         }
           homeContactSection {
           leftImage {
+            node {
+              altText
+              sourceUrl
+            }
+          }
+          bgImage {
             node {
               altText
               sourceUrl

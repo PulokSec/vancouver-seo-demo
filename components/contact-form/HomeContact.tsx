@@ -1,6 +1,7 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
-
+import { Fade } from 'react-awesome-reveal';
 
 type MyProps = {
   contactSection : any;
@@ -8,29 +9,51 @@ type MyProps = {
 const HomeContact = (props: MyProps) => {
   const { contactSection } = props;
   return (
-    <div className="flex justify-center items-center min-h-screen mt-20">
-      <div className="grid lg:grid-cols-2 grid-cols-1 lg:bg-[#04BF7E] rounded-lg shadow-lg w-full max-w-5xl p-4 gap-4">
-        <div className="right-[100px] relative z-1 w-full hodden lg:block">
+    <div className="relative max-w-screen h-screen w-full bg-blue-300 bg-repeat bg-center">
+      {/* Foreground Image */}
+      <div className="absolute inset-0 opacity-85">
+        <Image
+          src={contactSection?.bgImage?.node?.sourceUrl}
+          alt={contactSection?.bgImage?.node?.altText}
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="transition-all duration-300 ease-in-out"
+        />
+      </div>
+    <section className="flex justify-center items-center mt-20relative">
+      <div className="grid lg:grid-cols-2 grid-cols-1 w-full max-w-5xl p-4 gap-10 rounded  py-10 relative px-5">
+        <div className="relative z-1 w-full hidden lg:block">
+        <Fade direction='down'delay={0.5} fraction={0.2} triggerOnce>
+        <Image
+                src={contactSection?.leftImage?.node?.sourceUrl}
+                alt={contactSection?.leftImage?.node?.altText}
+                className="rounded-2xl shadow-md w-full lg:w-[700px] h-[400px] bg-white"
+                objectFit='contain'
+                width={700}
+                height={475}
+                style={{
+                  borderRadius: '100px 100px 300px 100px',
+                }}
+                quality={100}
+              />
+              </Fade>
+              <Fade direction='up'delay={0.5} fraction={0.2} triggerOnce>
           <Image
-            src={contactSection?.leftImage?.node?.sourceUrl}
-            alt={contactSection?.leftImage?.node?.altText}
-            width={200}
-            height={600}
-            objectFit="cover"
-            className="rounded shadow-md bg-white w-full lg:w-2/4 h-[80%] absolute top-[45%] left-0 translate-y-[-50%]"
-            quality={100}
-          />
-          <Image
-            src={contactSection?.rightImage?.node?.sourceUrl}
-            alt={contactSection?.rightImage?.node?.altText}
-            width={300}
-            height={600}
-            objectFit="cover"
-            className="rounded shadow-md bg-white absolute top-[50%] left-[270px] translate-y-[-45%] w-2/4 h-[80%]"
-            quality={100}
-          />
+                src={contactSection?.rightImage?.node?.sourceUrl}
+                alt={contactSection?.rightImage?.node?.altText}
+                className="rounded-2xl shadow-2xl w-full lg:w-[700px] h-[400px] left-[-100px]"
+                objectFit='contain'
+                width={700}
+                height={475}
+                style={{
+                  borderRadius: '300px 100px 100px 100px',
+                }}
+                quality={100}
+              />
+          </Fade>
         </div>
-        <div className="flex-1 px-5 bg-white rounded-lg shadow-lg justify-center items-center py-10 w-full">
+        <div className="flex-1 px-5 bg-white rounded-lg shadow-lg justify-center items-center py-10 w-full relative">
           <h2 className="text-3xl font-bold mb-6 text-center">{contactSection?.title}</h2>
           <form className="space-y-4">
             <div className="flex space-x-2">
@@ -98,12 +121,13 @@ const HomeContact = (props: MyProps) => {
                 how we process personal data and what rights you have.
               </span>
             </div>
-            <button className="w-full py-2 px-4 bg-[#DC2626] text-white rounded hover:bg-blue-700">
+            <button className="w-full py-2 px-4 bg-[#00C2CC] text-white rounded hover:bg-blue-700">
               Start here!
             </button>
           </form>
         </div>
       </div>
+    </section>
     </div>
   );
 };

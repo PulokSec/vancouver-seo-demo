@@ -19,6 +19,20 @@ export default {
         },
       },
     },
-    plugins: [],
+    plugins: [
+      function ({ addUtilities }) {
+        addUtilities(
+          {
+            '.max-w-8xl': {
+              maxWidth: '96rem', // Same value as in theme extend
+            },
+          },
+          {
+            variants: ['responsive'], // Optional: Add variants like responsive, hover, etc.
+            layer: 'utilities', // Specify the layer
+          }
+        );
+      },
+    ],
   },
 };

@@ -27,8 +27,8 @@ const PartnersSlider = (props: MyProps) => {
     <section className="mt-20">
       <CarouselComponent>
         {partnerData.map((partner, index) => (
-          <div key={index} className="flex justify-center items-center">
-            <Image src={partner.image.node.sourceUrl} alt={partner.image.node.altText} width={160} height={100} quality={100}/>
+          <div key={index} className="flex justify-center items-center gap-2">
+            <Image src={partner.image.node.sourceUrl} alt={partner.image.node.altText} width={160} height={100} quality={100} className='w-full md:w-[200px] h-[160px] lg:w-[260px] bg-white border shadow-md'/>
           </div>
         ))}
       </CarouselComponent>
