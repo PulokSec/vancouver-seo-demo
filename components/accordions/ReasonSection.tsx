@@ -13,7 +13,6 @@ type MyProps = {
 }
 const ReasonsSection = (props: MyProps) => {
   const { reasonSection } = props;
-  console.log(reasonSection);
   return (
     <div className="py-16 px-4 md:px-10 lg:px-20 bg-gray-50">
       <div className="text-center mb-5">
@@ -23,13 +22,13 @@ const ReasonsSection = (props: MyProps) => {
         </div>
       </div>
       <div className="flex items-center justify-center gap-4 py-5">
-        <a href={reasonSection?.linkUrl} className=""><button className=" bg-[#00C2CC] py-2 rounded text-white font-bold lg:w-[250px] flex justify-center uppercase"><span className="text-center px-1">{reasonSection?.linkText}</span></button></a>
+        <a href={reasonSection?.linkUrl} className=""><button className=" bg-[#00C2CC] hover:bg-[#001B42] py-2 rounded text-white font-bold lg:w-[250px] flex justify-center uppercase"><span className="text-center px-1">{reasonSection?.linkText}</span></button></a>
         </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {reasonSection?.featuredData.map((reason, idx) => (
           <div key={idx} className="bg-white p-6 rounded-lg shadow-lg">
             <div className="flex items-start">
-              <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-full">
+              <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center bg-[#001B42] text-white rounded-full hover:scale-150 transition-all duration-300 ease-in-out">
                 <span className="text-2xl font-bold">{idx+1}</span>
               </div>
               <div className="ml-4">

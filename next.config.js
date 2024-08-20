@@ -52,7 +52,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'savemaxbc.wpengine.com',
+        hostname: 'delante.co',
         pathname: '**',
       },
       {

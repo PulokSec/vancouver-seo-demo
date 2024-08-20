@@ -121,7 +121,7 @@ const HomeContact = (props: MyProps) => {
                 how we process personal data and what rights you have.
               </span>
             </div>
-            <button className="w-full py-2 px-4 bg-[#00C2CC] text-white rounded hover:bg-blue-700">
+            <button className="w-full py-2 px-4 bg-[#00C2CC] hover:bg-[#001B42] text-white rounded">
               Start here!
             </button>
           </form>

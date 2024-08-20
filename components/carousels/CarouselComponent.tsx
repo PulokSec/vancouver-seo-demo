@@ -50,7 +50,7 @@ export default function CarouselComponent({
           strokeWidth={10}
         /> */}
         <ChevronRight
-          className='h-6 w-6 cursor-pointer border-none text-[#3B82F6] transition-all duration-300 ease-in-out hover:scale-125'
+          className='h-6 w-6 cursor-pointer border-none text-[#3B82F6] transition-all duration-300 ease-in-out hover:scale-150'
           strokeWidth={4}
         />
       </button>
@@ -69,7 +69,7 @@ export default function CarouselComponent({
           strokeWidth={10}
         /> */}
         <ChevronLeft
-          className='h-6 w-6 cursor-pointer border-none text-[#3B82F6] transition-all duration-300 ease-in-out hover:scale-125'
+          className='h-6 w-6 cursor-pointer border-none text-[#3B82F6] transition-all duration-300 ease-in-out hover:scale-150'
           strokeWidth={4}
         />
       </button>

@@ -1,8 +1,9 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { headerData } from './data';
 import Image from 'next/image';
 import { FiPhoneCall, FiMenu, FiX, FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { UseClickOutside } from '../hooks/UseClickOutside';
 
 type MyProps = {
   headerItems: any;
@@ -12,7 +13,10 @@ const Header = (props: MyProps) => {
   const [hoveredMenu, setHoveredMenu] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
-
+  const domNode: any = useRef();
+  UseClickOutside(domNode.current, () => {
+    setHoveredMenu(null);
+  });
   return (
     <header className="bg-gradient-to-r from-[#3A5DE1] via-[#414EDD] to-[#356AE4] shadow fixed w-full top-0 z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -37,17 +41,17 @@ const Header = (props: MyProps) => {
                 )
               }
               {hoveredMenu === index && menuItem?.childItems?.nodes?.length > 0 && (
-                <div className="absolute left-0 lg:w-screen md:w-[600px] max-w-3xl bg-white shadow-lg p-6 mt-[22px]" onMouseLeave={() => setHoveredMenu(null)}>
+                <div className="absolute left-0 lg:w-screen md:w-[600px] max-w-3xl bg-white shadow-lg p-6 mt-[22px] transition-all duration-300 ease-in-out" ref={domNode} onMouseLeave={() => setHoveredMenu(null)}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {menuItem?.childItems?.nodes?.map((column, colIndex) => (
                       <div key={colIndex}>
-                        <a href={column?.uri} className=""><p className="font-semibold mb-2 text-lg hover:font-bold">{column.label}</p></a>
+                        <a href={column?.uri} className=""><p className="font-semibold mb-2 text-lg hover:font-bold transition-all duration-300 ease-in-out hover:scale-122">{column.label}</p></a>
                         {
                           column?.childItems?.nodes?.length !== 0 && (
                             <ul className="space-y-1">
                           {column?.childItems?.nodes?.map((item, itemIndex) => (
                             <li key={itemIndex}>
-                              <a href={item?.uri} className="text-gray-700 text-md hover:text-[#414EDD] hover:font-semibold">
+                              <a href={item?.uri} className="text-gray-700 text-md hover:text-[#414EDD] hover:font-semibold transition-all duration-300 ease-in-out hover:scale-125">
                                 {item?.label}
                               </a>
                             </li>

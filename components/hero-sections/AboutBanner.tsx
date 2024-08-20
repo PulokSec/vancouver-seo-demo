@@ -3,7 +3,7 @@ import React from 'react';
 type MyProps = {
   bannerSection: any;
 }
-const HomeBanner = (props: MyProps) => {
+const AboutBanner = (props: MyProps) => {
   const { bannerSection } = props;
   console.log(bannerSection);
   return (
@@ -31,22 +31,24 @@ const HomeBanner = (props: MyProps) => {
         <button className=" bg-[#00C2CC] hover:bg-[#001B42] py-2 rounded text-white font-bold lg:w-[150px] flex justify-center"><span className="text-center px-1">{bannerSection?.applyButton}</span></button>
         </div>
         </div>
-        <div className="mt-10 w-full p-2 bg-[#ebf0fa]  rounded shadow-lg lg:w-2/4 py-5 lg:py-10 text-gray-900">
-          <p className="text-2xl font-bold text-gray-900">Call: (778) 655-8505</p>
-          <p className="mt-2">Or fill in the form below and we'll call you.</p>
-          <form className="mt-5 space-y-4 lg:mt-10">
-            <input type="text" placeholder="Full Name" className="w-full p-2 rounded text-gray-900 lg:w-[300px] xl:w-[400px]" required />
-            <input type="email" placeholder="Email Address" className="w-full p-2 rounded text-gray-900 lg:w-[300px] xl:w-[400px]" required />
-            <input type="tel" placeholder="Phone" className="w-full p-2 rounded text-gray-900 lg:w-[300px] xl:w-[400px]" required />
-            <input type="text" placeholder="Company Website" className="w-full p-2 rounded text-gray-900 lg:w-[300px] xl:w-[400px]" required />
-            <textarea placeholder="Message" className="w-full p-2 rounded text-gray-900 lg:w-[300px] xl:w-[400px]" required></textarea>
-            <button type="submit" className="w-full bg-[#00C2CC] hover:bg-[#001B42] py-2 rounded text-white font-bold lg:w-[300px] xl:w-[400px]">Get A Free Consultation</button>
-          </form>
-        </div>
+        <div className="flex-1 mt-6 md:mt-0">
+        <Image
+                src={bannerSection?.image?.node?.sourceUrl} // replace with your actual image path
+                alt={bannerSection?.image?.node?.altText}
+                className="rounded-2xl shadow-md w-full lg:w-[700px] h-[400px]"
+                objectFit='contain'
+                width={700}
+                height={475}
+                style={{
+                  borderRadius: '300px 100px 100px 100px',
+                }}
+                quality={100}
+              />
+      </div>
       </div>
     </section>
     </div>
   );
 };
 
-export default HomeBanner;
+export default AboutBanner;

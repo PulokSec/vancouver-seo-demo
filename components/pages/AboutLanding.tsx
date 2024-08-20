@@ -12,7 +12,7 @@ import FeaturedTabService from '../service-sections/FeaturedTabService'
 type MyProps = {
   data: any;
 }
-export default function HomeLanding(props: MyProps) {
+export default function AboutLanding(props: MyProps) {
   const { data } = props;
   console.log(data);
   return (
@@ -28,10 +28,10 @@ export default function HomeLanding(props: MyProps) {
         <FeaturedServices featuredSection={data?.investingSection}/>
         <FeaturedServices featuredSection={data?.necessarySection}/>
         <ReasonsSection reasonSection={data?.pointSection}/>
-        <TeamCarousel />
         {/* <ReviewSlider /> */}
         {/* <TabSection /> */}
         {/* <FaqAccordion /> */}
+        <TeamCarousel />
         <HomeContact contactSection={data?.homeContactSection}/>
       </main>
     </div>

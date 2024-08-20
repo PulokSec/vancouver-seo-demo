@@ -19,7 +19,7 @@ const HomeAboutSection = (props: MyProps) => {
             </p>
           </div>
           <div className="flex items-center justify-center gap-4 py-5">
-        <a href={aboutSection?.linkUrl} className=""><button className=" bg-[#00C2CC] py-2 rounded text-white font-bold lg:w-[250px] flex justify-center uppercase"><span className="text-center px-1">{aboutSection?.linkText}</span></button></a>
+        <a href={aboutSection?.linkUrl} className=""><button className=" bg-[#00C2CC] hover:bg-[#001B42] py-2 rounded text-white font-bold lg:w-[250px] flex justify-center uppercase"><span className="text-center px-1">{aboutSection?.linkText}</span></button></a>
         </div>
         </div>
       </div>
