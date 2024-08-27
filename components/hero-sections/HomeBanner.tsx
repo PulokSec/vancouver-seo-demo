@@ -7,7 +7,7 @@ const HomeBanner = (props: MyProps) => {
   const { bannerSection } = props;
   console.log(bannerSection);
   return (
-    <div className="relative max-w-screen w-full bg-gradient-to-r from-blue-700 to-blue-500 bg-repeat bg-center">
+    <div className="relative max-w-screen w-full bg-gradient-to-r from-blue-700 to-blue-500 bg-repeat bg-center lg:h-[100dvh]">
       {/* Foreground Image */}
       <div className="absolute inset-0 opacity-15">
         <Image
@@ -20,9 +20,9 @@ const HomeBanner = (props: MyProps) => {
         />
       </div>
       <section className="lg:p-5 p-2 relative">
-      <div className="flex lg:flex-row flex-col items-center justify-center gap-10 text-center mt-10">
-        <div className="w-3/4 md:px-3 flex flex-col items-center lg:items-start">
-        <h1 className="text-4xl font-bold text-center lg:text-start text-white">{bannerSection?.bannerTitle}</h1>
+      <div className="flex lg:flex-row flex-col items-center justify-center gap-10 text-center mt-10 lg:mt-[10%]">
+        <div className="lg:w-3/4 w-full md:px-3 flex flex-col items-center lg:items-start">
+        <h1 className="text-4xl font-bold text-center lg:text-start text-white lg:text-6xl">{bannerSection?.bannerTitle}</h1>
         <p className="mt-4 text-lg text-center lg:text-start text-white">
         {bannerSection?.bannerDescription}
         </p>

@@ -24,7 +24,7 @@ type MyProps = {
 const PartnersSlider = (props: MyProps) => {
   const { partnerData } = props;
   return (
-    <section className="mt-20">
+    <section className="mt-20 relative z-0">
       <CarouselComponent>
         {partnerData.map((partner, index) => (
           <div key={index} className="flex justify-center items-center gap-2">

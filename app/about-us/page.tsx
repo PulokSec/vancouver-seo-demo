@@ -3,6 +3,7 @@ import { gql } from "@apollo/client";
 import Link from "next/link";
 import HomeLanding from "@/components/pages/HomeLanding";
 import { Metadata } from "next";
+import AboutLanding from "@/components/pages/AboutLanding";
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = await getClient();
@@ -283,7 +284,7 @@ export default async function Page() {
   });
   return (
     <main>
-      <HomeLanding data={data?.pages?.nodes[0]?.homePage}/>
+      <AboutLanding data={data?.pages?.nodes[0]?.homePage}/>
     </main>
   );
 }

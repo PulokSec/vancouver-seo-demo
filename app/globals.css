@@ -13,7 +13,7 @@ h2 {
   @apply font-bold;
 }
 section {
-  @apply max-w-7xl my-12 mx-auto;
+  @apply max-w-7xl mx-auto;
 }
 main > h2 {
   @apply mb-4 pb-2 text-base;
@@ -27,8 +27,8 @@ p > a {
 
 /* button styles */
 button {
-  @apply px-1 py-2
-    rounded-sm 
+  @apply px-1 py-3
+  rounded-[30px]
     flex justify-between items-center gap-2
     text-sm;
 }

@@ -18,7 +18,7 @@ const Header = (props: MyProps) => {
     setHoveredMenu(null);
   });
   return (
-    <header className="bg-gradient-to-r from-[#3A5DE1] via-[#414EDD] to-[#356AE4] shadow fixed w-full top-0 z-10">
+    <header className="bg-gradient-to-r from-[#3A5DE1] via-[#414EDD] to-[#356AE4] shadow fixed w-full top-0 z-10 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Image src={headerData.logo} alt="Logo" width={120} height={40} quality={100}/>
         <nav className="hidden md:flex space-x-16" >
