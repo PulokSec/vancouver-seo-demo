@@ -37,6 +37,11 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'cdn.visibilitygurus.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
         hostname: 'ddfcdn.realtor.ca',
         pathname: '**',
       },
