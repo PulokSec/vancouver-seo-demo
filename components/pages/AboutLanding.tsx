@@ -20,7 +20,6 @@ export default function AboutLanding(props: MyProps) {
   const { data } = props;
   console.log(data);
   return (
-    <div>
       <main>
         <AboutBanner bannerSection={data?.homeBannerSection}/>
         <AboutSection aboutSection={data?.aboutSection}/>
@@ -37,6 +36,5 @@ export default function AboutLanding(props: MyProps) {
         <TeamCarousel />
         <GetInTouch/>
       </main>
-    </div>
   )
 }

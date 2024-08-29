@@ -8,10 +8,9 @@ type MyProps = {
 
 export default function FeaturedServices(props: MyProps) {
   const { featuredSection } = props;
-  console.log(featuredSection);
 
   return (
-    <div className="max-w-7xl mx-auto p-4 mt-20">
+    <section className="p-4 mt-20 overflow-hidden">
       <div className="text-center mb-5">
         <h2 className="text-4xl font-bold text-gray-800">{featuredSection?.title}</h2>
         <div className="mt-2 text-xl text-gray-600" dangerouslySetInnerHTML={{ __html: featuredSection?.description }}></div>
@@ -46,6 +45,6 @@ export default function FeaturedServices(props: MyProps) {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

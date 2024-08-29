@@ -11,7 +11,7 @@ const FeaturedTabService = (props: MyProps) => {
   const { serviceSection } = props;
   const [activeTab, setActiveTab] = useState<number>(0);
   return (
-    <div className="relative max-w-screen w-full bg-blue-300 bg-repeat bg-center">
+    <div className="relative w-full bg-blue-300 bg-center overflow-hidden mt-40">
       {/* Foreground Image */}
       <div className="absolute inset-0 opacity-55">
         <Image
@@ -20,10 +20,10 @@ const FeaturedTabService = (props: MyProps) => {
           layout="fill"
           objectFit="cover"
           quality={100}
-          className="transition-all duration-300 ease-in-out"
+          className=""
         />
       </div>
-    <section className="flex flex-col items-center py-10  px-4 md:px-10 lg:px-20 mt-20 lg:mt-40 relative">
+    <section className="flex flex-col items-center py-10  px-4 md:px-10 lg:px-20 mt-20 relative">
       <div className="text-center mb-10">
       <p className="mt-2 text-xl text-gray-600">{serviceSection?.shortTitle}</p>
         <h2 className="text-3xl font-bold text-gray-800">{serviceSection?.title}</h2>

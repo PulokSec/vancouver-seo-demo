@@ -7,7 +7,7 @@ const HomeBanner = (props: MyProps) => {
   const { bannerSection } = props;
   console.log(bannerSection);
   return (
-    <div className="relative max-w-screen w-full bg-gradient-to-r from-blue-700 to-blue-500 bg-repeat bg-center lg:h-[100dvh]">
+    <div className="relative w-full bg-gradient-to-r from-blue-700 to-blue-500 bg-center lg:h-[100dvh] overflow-hidden">
       {/* Foreground Image */}
       <div className="absolute inset-0 opacity-15">
         <Image

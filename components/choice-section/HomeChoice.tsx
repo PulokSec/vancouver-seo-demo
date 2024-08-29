@@ -6,9 +6,8 @@ type MyProps = {
 }
 const HomeChoiceSection = (props: MyProps)=> {
   const { choiceSection } = props;
-  console.log(choiceSection);
   return (
-    <div className="relative w-screen bg-gradient-to-r from-gray-50 to-blue-50 bg-repeat">
+    <div className="relative w-full bg-gradient-to-r from-gray-50 to-blue-50 overflow-hidden">
       {/* Foreground Image */}
       <div className="absolute inset-0 opacity-95">
         <Image
@@ -17,7 +16,7 @@ const HomeChoiceSection = (props: MyProps)=> {
           layout="fill"
           objectFit="cover"
           quality={100}
-          className="transition-all duration-300 ease-in-out"
+          className=""
         />
       </div>
     <section className="py-10 px-4 md:px-10 lg:px-20 lg:mt-20 mt-10 relative">

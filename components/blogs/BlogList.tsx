@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import BlogCard from './BlogCard';
+import Image from 'next/image';
 
 
 
@@ -32,7 +33,6 @@ const blogs = [
     readTime: '2 min read',
     imageUrl: 'https://cdn.visibilitygurus.com/wp-content/uploads/shopify_sitemap2.jpg?strip=all&lossy=1&webp=80&avif=75&ssl=1',
     category: 'Shopify SEO',
-    featured: true,
   },
   {
     id: 4,
@@ -50,7 +50,6 @@ const blogs = [
     readTime: '2 min read',
     imageUrl: 'https://cdn.visibilitygurus.com/wp-content/uploads/Shopify-CDN-Explained-Benefits-Customization-6.jpg?strip=all&lossy=1&webp=80&avif=75&ssl=1',
     category: 'Shopify SEO',
-    featured: true,
   },
   {
     id: 6,
@@ -68,7 +67,6 @@ const blogs = [
     readTime: '2 min read',
     imageUrl: 'https://cdn.visibilitygurus.com/wp-content/uploads/shopify-about-us-page.jpg?strip=all&lossy=1&webp=80&avif=75&ssl=1',
     category: 'Shopify SEO',
-    featured: true,
   },
   {
     id: 8,
@@ -86,7 +84,6 @@ const blogs = [
     readTime: '2 min read',
     imageUrl: 'https://cdn.visibilitygurus.com/wp-content/uploads/shopify-about-us-page.jpg?strip=all&lossy=1&webp=80&avif=75&ssl=1',
     category: 'Shopify SEO',
-    featured: true,
   },
   {
     id: 10,
@@ -105,7 +102,6 @@ const blogs = [
     readTime: '2 min read',
     imageUrl: 'https://cdn.visibilitygurus.com/wp-content/uploads/shopify-about-us-page.jpg?strip=all&lossy=1&webp=80&avif=75&ssl=1',
     category: 'Shopify SEO',
-    featured: true,
   },
   {
     id: 12,
@@ -136,12 +132,26 @@ const BlogList: React.FC = () => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className="max-w-7xl mx-auto py-8 px-4 mt-40">
+    <section className="py-16">
       {/* Featured Blog */}
       {featuredBlog && (
         <div className="mb-8">
-          <BlogCard blog={featuredBlog} />
+      <div className="flex lg:flex-row flex-col justify-center items-center gap-4">
+      <div className="lg:w-4/6 border rounded-lg overflow-hidden shadow-lg w-full mx-5">
+      <Image src={featuredBlog.imageUrl} alt={featuredBlog.title} width={700} height={400} className="object-cover w-full h-48 lg:h-[400px]" quality={100} /></div>
+      <div className="p-4 lg:w-2/6">
+        <span className="text-sm text-[#00C2CC]">{featuredBlog.category}</span>
+        <h3 className="text-lg lg:text-4xl font-semibold mt-2">{featuredBlog.title}</h3>
+        <div className="flex items-center mt-2 text-sm text-gray-500">
+          <span>{featuredBlog.author}</span>
+          <span className="mx-1">•</span>
+          <span>{featuredBlog.date}</span>
+          <span className="mx-1">•</span>
+          <span>{featuredBlog.readTime}</span>
         </div>
+      </div>
+      </div>
+    </div>
       )}
 
       {/* Blog Grid */}
@@ -158,7 +168,7 @@ const BlogList: React.FC = () => {
             <li
               key={index + 1}
               className={`mx-1 cursor-pointer py-2 px-4 border rounded-full ${
-                currentPage === index + 1 ? 'bg-green-500 text-white' : 'bg-white text-gray-700'
+                currentPage === index + 1 ? 'bg-[#00C2CC] text-white' : 'bg-white text-gray-700'
               }`}
               onClick={() => paginate(index + 1)}
             >
@@ -167,7 +177,7 @@ const BlogList: React.FC = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

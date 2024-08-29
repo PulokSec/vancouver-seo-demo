@@ -16,11 +16,11 @@ type BlogCardProps = {
 
 const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return (
-    <div className={`border rounded-lg overflow-hidden shadow-lg ${blog.featured ? 'col-span-2' : ''}`}>
-      <Image src={blog.imageUrl} alt={blog.title} width={600} height={400} className="object-cover w-full h-48" />
+    <div className="">
+      <div className="border rounded overflow-hidden shadow-lg"><Image quality={100} src={blog.imageUrl} alt={blog.title} width={600} height={400} className="object-cover w-full h-48 lg:h-[300px]" /></div>
       <div className="p-4">
-        <span className="text-sm text-green-500">{blog.category}</span>
-        <h3 className="text-lg font-semibold mt-2">{blog.title}</h3>
+        <span className="text-sm text-[#00C2CC]">{blog.category}</span>
+        <h3 className="text-lg lg:text-2xl font-semibold mt-2">{blog.title}</h3>
         <div className="flex items-center mt-2 text-sm text-gray-500">
           <span>{blog.author}</span>
           <span className="mx-1">•</span>

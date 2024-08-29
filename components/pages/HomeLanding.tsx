@@ -16,7 +16,6 @@ export default function HomeLanding(props: MyProps) {
   const { data } = props;
   console.log(data);
   return (
-    <div>
       <main>
         <HomeBanner bannerSection={data?.homeBannerSection}/>
         <PartnersSlider partnerData={data?.partnerSection}/>
@@ -28,12 +27,10 @@ export default function HomeLanding(props: MyProps) {
         <FeaturedServices featuredSection={data?.investingSection}/>
         <FeaturedServices featuredSection={data?.necessarySection}/>
         <ReasonsSection reasonSection={data?.pointSection}/>
-        <TeamCarousel />
         {/* <ReviewSlider /> */}
         {/* <TabSection /> */}
         {/* <FaqAccordion /> */}
         <HomeContact contactSection={data?.homeContactSection}/>
       </main>
-    </div>
   )
 }

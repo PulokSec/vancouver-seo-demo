@@ -14,8 +14,9 @@ type MyProps = {
 const ReasonsSection = (props: MyProps) => {
   const { reasonSection } = props;
   return (
-    <div className="py-16 px-4 md:px-10 lg:px-20 bg-gray-50">
-      <div className="text-center mb-5">
+    <div className="bg-gray-50 overflow-hidden">
+     <section className='py-16'>
+     <div className="text-center mb-5">
         {/* <span className="text-red-500 font-semibold">Why SECI?</span> */}
         <h2 className="text-3xl font-bold text-gray-800 mt-2">{reasonSection?.title}</h2>
         <div className="text-gray-600 mt-4" dangerouslySetInnerHTML={{__html: reasonSection?.description}}>
@@ -41,6 +42,7 @@ const ReasonsSection = (props: MyProps) => {
           </div>
         ))}
       </div>
+     </section>
     </div>
   );
 };

@@ -18,8 +18,8 @@ const Header = (props: MyProps) => {
     setHoveredMenu(null);
   });
   return (
-    <header className="bg-gradient-to-r from-[#3A5DE1] via-[#414EDD] to-[#356AE4] shadow fixed w-full top-0 z-10 ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+    <header className="bg-gradient-to-r from-[#3A5DE1] via-[#414EDD] to-[#356AE4] shadow sticky w-full top-0 z-10 ">
+      <section className="px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Image src={headerData.logo} alt="Logo" width={120} height={40} quality={100}/>
         <nav className="hidden md:flex space-x-16" >
           {headerItems.map((menuItem, index) => (
@@ -76,7 +76,7 @@ const Header = (props: MyProps) => {
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
-      </div>
+      </section>
       {mobileMenuOpen && (
         <div className="md:hidden bg-white shadow-lg transition-[max-height,transform] duration-300 origin-top">
           <nav className="px-4 text-center flex flex-col items-center py-5">
