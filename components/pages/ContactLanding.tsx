@@ -4,9 +4,12 @@ import ReasonsSection from '../accordions/ReasonSection'
 import PartnersSlider from '../carousels/PartnerSlider'
 import TeamCarousel from '../carousels/TeamCarousel'
 import HomeChoiceSection from '../choice-section/HomeChoice'
+import ContactPageForm from '../contact-form/ContactPageForm'
 import GetInTouch from '../contact-form/GetInTouch'
 import HomeContact from '../contact-form/HomeContact'
+import ConnectSection from '../elements/ConnectSection'
 import JourneySection from '../elements/JourneySection'
+import VisitSection from '../elements/VisitSection'
 import AboutBanner from '../hero-sections/AboutBanner'
 import ContactBanner from '../hero-sections/ContactBanner'
 import HomeBanner from '../hero-sections/HomeBanner'
@@ -23,19 +26,9 @@ export default function ContactLanding(props: MyProps) {
   return (
       <main> 
         <ContactBanner bannerSection={data?.homeBannerSection}/>
-        <AboutSection aboutSection={data?.aboutSection}/>
-        <JourneySection />
-        <HomeChoiceSection choiceSection={data?.choiceSection}/>
-        <FeaturedServices featuredSection={data?.importanceSection}/>
-        <FeaturedRounded featuredSection={data?.powerSection}/>
-        <FeaturedServices featuredSection={data?.investingSection}/>
-        <FeaturedServices featuredSection={data?.necessarySection}/>
-        <ReasonsSection reasonSection={data?.pointSection}/>
-        {/* <ReviewSlider /> */}
-        {/* <TabSection /> */}
-        {/* <FaqAccordion /> */}
-        <TeamCarousel />
-        <GetInTouch/>
+        <ContactPageForm/>
+        <VisitSection bannerSection={data?.homeBannerSection}/>
+        <ConnectSection />
       </main>
   )
 }
