@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { BiSolidMessageRounded } from "react-icons/bi";
 import { TbLocationFilled } from "react-icons/tb";
-import { MdLocalPhone } from "react-icons/md";
+import { BsFillPhoneFill } from "react-icons/bs";
+
 
 export default function ContactPageForm() {
   const [service, setService] = useState('');
@@ -16,7 +17,7 @@ export default function ContactPageForm() {
       <div className="w-full md:w-3/6">
         <div className="py-10">
         <h3 className="text-xl md:text-2xl lg:text-4xl font-bold mb-6 text-center">Work with us.</h3>
-        <form className="space-y-4">
+        <form className="space-y-4 w-full">
           <div>
             <label className="block text-gray-700">Name</label>
             <input
@@ -87,7 +88,7 @@ export default function ContactPageForm() {
         </p>
       </div>
       <div className="flex justify-start items-start gap-4 mt-5">
-        <div className="">
+        <div className="mt-1">
         <span className=" text-[#3864E3]"><BiSolidMessageRounded className="w-[20px] h-[20px]"/></span>
         </div>
         <div className="flex flex-col items-start">
@@ -101,7 +102,7 @@ export default function ContactPageForm() {
         </div>
       </div>
       <div className="flex justify-start items-start gap-4 mt-5">
-        <div className="">
+        <div className="mt-1">
         <span className="text-[#3864E3]"> <TbLocationFilled className="w-[20px] h-[20px]" /></span>
         </div>
         <div className="flex flex-col items-start">
@@ -115,7 +116,7 @@ export default function ContactPageForm() {
         </div>
       </div><div className="flex justify-center items-start gap-4 mt-5">
         <div className="mt-1">
-        <span className=" text-[#3864E3]"><MdLocalPhone  className="w-[25px] h-[25px]"/>
+        <span className=" text-[#3864E3]"><BsFillPhoneFill  className="w-[20px] h-[20px]"/>
         </span>
         </div>
         <div className="flex flex-col items-start">
