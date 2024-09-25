@@ -36,17 +36,17 @@ const StrategySection = (props: MyProps) => {
       ></div>
 
       <section className="lg:p-5 p-2 relative z-10">
-        <div className="flex lg:flex-row flex-col items-center justify-center gap-10 text-center mt-10">
-          <div className="lg:w-2/4 w-full md:px-3 flex flex-col items-center lg:items-start">
+        <div className="flex lg:flex-row flex-col items-center justify-center gap-10 text-center">
+          <div className="lg:w-2/4 w-full md:px-3 flex flex-col items-center lg:items-start ">
             <h1 className="text-4xl lg:text-6xl font-bold text-center lg:text-start text-white mt-3">
               On-page Optimization Strategies
             </h1>
-            <p className="mt-4 text-lg text-center lg:text-start text-white">
+            <p className="mt-4 text-lg text-center lg:text-start text-white ">
               Improving your Vancouver search rankings requires on-page optimization. These strategies make your website search engine-friendly, boosting its visibility. Key tactics include crafting SEO content with relevant keywords for your Vancouver audience. Additionally, optimizing your website’s structure, navigation, and design enhances user experience and search engine recognition. Implement these strategies consistently to stay ahead in the competitive Vancouver market and draw more customers to your business.
             </p>
             <div className="flex items-center justify-center gap-4 py-5"></div>
           </div>
-          <div className="flex-1 mt-6 md:mt-[-200px]">
+          <div className="flex-1 mt-6 md:mt-[-200px] lg:pb-20">
             <Image
               src='https://vancouverseo.com/wp-content/uploads/2023/10/local-search-engine-optimization.webp' // replace with your actual image path
               alt={bannerSection?.image?.node?.altText}

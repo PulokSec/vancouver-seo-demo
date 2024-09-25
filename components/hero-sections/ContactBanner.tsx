@@ -21,7 +21,7 @@ const ContactBanner = (props: MyProps) => {
       <section className="lg:p-5 p-2 relative">
       <div className="flex lg:flex-row flex-col items-center justify-center gap-10 text-center mt-10 lg:mt-20">
         <div className="lg:w-2/4 w-full md:px-3 flex flex-col items-center">
-        <h1 className="text-4xl lg:text-6xl font-bold text-center text-white mt-5">Contact Vancouverseo</h1>
+        <h1 className="text-4xl lg:text-6xl font-bold text-center text-white mt-5 lg:mt-20">Contact Vancouverseo</h1>
         <p className="mt-4 text-lg text-center text-white">
         We would Be Happy To Assist You
         </p>
